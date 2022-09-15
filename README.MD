@@ -10,7 +10,7 @@ fast-api-hunty is an api designed to query job vacancies and users in a test dat
 
 #### Entity relationship model:
 
-<img src="https://github.com/japersa/fast-api-hunty/blob/84c53c492814647b94ba24fe47a194800c861dfa/model.png" />
+<img src="https://github.com/japersa/fast-api-hunty/blob/9592bcedd8024cc5077c148efce6192cf698c166/model.png" />
 
 #### Installation:
 
