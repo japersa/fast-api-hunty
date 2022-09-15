@@ -1,0 +1,2405 @@
+{
+	"info": {
+		"_postman_id": "1cb5b537-3072-4ca3-9e91-7b1b89182010",
+		"name": "Fast API Hunty",
+		"description": "API for managing users and vacancies.\n\nContact Support:\n Name: Alvaro Javier Perez Salcedo\n Email: japersa92@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "161827"
+	},
+	"item": [
+		{
+			"name": "companies",
+			"item": [
+				{
+					"name": "{Company Id}",
+					"item": [
+						{
+							"name": "Read Company",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/companies/:CompanyId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"companies",
+										":CompanyId"
+									],
+									"variable": [
+										{
+											"key": "CompanyId",
+											"value": "urn:uuid:b5c2805c-a338-162f-58fa-22156e57ddd7",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/companies/:CompanyId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"companies",
+												":CompanyId"
+											],
+											"variable": [
+												{
+													"key": "CompanyId",
+													"value": "urn:uuid:b5c2805c-a338-162f-58fa-22156e57ddd7",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"Name\": \"dolore\",\n  \"Email\": \"sint id magna\",\n  \"Phone\": \"consectetur enim\",\n  \"CompanyId\": \"36abd291-7e32-64e1-d9d8-ed1a12642109\",\n  \"CreatedAt\": \"2006-01-23T09:21:21.342Z\",\n  \"UpdatedAt\": \"2002-04-07T20:26:34.755Z\"\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/companies/:CompanyId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"companies",
+												":CompanyId"
+											],
+											"variable": [
+												{
+													"key": "CompanyId",
+													"value": "urn:uuid:b5c2805c-a338-162f-58fa-22156e57ddd7",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Company",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/companies/:CompanyId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"companies",
+										":CompanyId"
+									],
+									"variable": [
+										{
+											"key": "CompanyId",
+											"value": "urn:uuid:b5c2805c-a338-162f-58fa-22156e57ddd7",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/companies/:CompanyId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"companies",
+												":CompanyId"
+											],
+											"variable": [
+												{
+													"key": "CompanyId",
+													"value": "urn:uuid:b5c2805c-a338-162f-58fa-22156e57ddd7",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"Name\": \"dolore\",\n  \"Email\": \"sint id magna\",\n  \"Phone\": \"consectetur enim\",\n  \"CompanyId\": \"36abd291-7e32-64e1-d9d8-ed1a12642109\",\n  \"CreatedAt\": \"2006-01-23T09:21:21.342Z\",\n  \"UpdatedAt\": \"2002-04-07T20:26:34.755Z\"\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/companies/:CompanyId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"companies",
+												":CompanyId"
+											],
+											"variable": [
+												{
+													"key": "CompanyId",
+													"value": "urn:uuid:b5c2805c-a338-162f-58fa-22156e57ddd7",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Company",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"Name\": \"minim id in\",\n  \"Email\": \"cupidatat veniam\",\n  \"Phone\": \"deserunt id\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/companies/:CompanyId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"companies",
+										":CompanyId"
+									],
+									"variable": [
+										{
+											"key": "CompanyId",
+											"value": "urn:uuid:b5c2805c-a338-162f-58fa-22156e57ddd7",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"Name\": \"minim id in\",\n  \"Email\": \"cupidatat veniam\",\n  \"Phone\": \"deserunt id\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/companies/:CompanyId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"companies",
+												":CompanyId"
+											],
+											"variable": [
+												{
+													"key": "CompanyId",
+													"value": "urn:uuid:b5c2805c-a338-162f-58fa-22156e57ddd7",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"Name\": \"dolore\",\n  \"Email\": \"sint id magna\",\n  \"Phone\": \"consectetur enim\",\n  \"CompanyId\": \"36abd291-7e32-64e1-d9d8-ed1a12642109\",\n  \"CreatedAt\": \"2006-01-23T09:21:21.342Z\",\n  \"UpdatedAt\": \"2002-04-07T20:26:34.755Z\"\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"Name\": \"minim id in\",\n  \"Email\": \"cupidatat veniam\",\n  \"Phone\": \"deserunt id\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/companies/:CompanyId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"companies",
+												":CompanyId"
+											],
+											"variable": [
+												{
+													"key": "CompanyId",
+													"value": "urn:uuid:b5c2805c-a338-162f-58fa-22156e57ddd7",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Read Companies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/companies?skip=0&limit=100",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"companies"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/companies?skip=0&limit=100",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"companies"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"Name\": \"amet laborum eiusmod\",\n    \"Email\": \"in qui ullamco\",\n    \"Phone\": \"est eiusmod et culpa tempor\",\n    \"CompanyId\": \"a446393a-f99f-b032-14b5-882da5c9b494\",\n    \"CreatedAt\": \"1968-03-15T20:51:24.523Z\",\n    \"UpdatedAt\": \"1991-09-13T09:37:29.982Z\"\n  },\n  {\n    \"Name\": \"reprehenderit ut labore do\",\n    \"Email\": \"in est magna\",\n    \"Phone\": \"reprehenderit dolore dolor ex consequat\",\n    \"CompanyId\": \"05cb0c96-c728-4f0b-b6a4-380cb552e754\",\n    \"CreatedAt\": \"1968-10-17T17:17:05.878Z\",\n    \"UpdatedAt\": \"1970-03-07T09:23:44.003Z\"\n  }\n]"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/companies?skip=0&limit=100",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"companies"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"qui ipsum ex\",\n        \"tempor in nostrud\"\n      ],\n      \"msg\": \"consectetur ullamco esse\",\n      \"type\": \"ut ut\"\n    },\n    {\n      \"loc\": [\n        \"nisi ani\",\n        \"quis dolor\"\n      ],\n      \"msg\": \"ullamco aliqua\",\n      \"type\": \"velit\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create New Company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Name\": \"minim id in\",\n  \"Email\": \"cupidatat veniam\",\n  \"Phone\": \"deserunt id\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/companies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"companies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"Name\": \"minim id in\",\n  \"Email\": \"cupidatat veniam\",\n  \"Phone\": \"deserunt id\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/companies",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"companies"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"Name\": \"dolore\",\n  \"Email\": \"sint id magna\",\n  \"Phone\": \"consectetur enim\",\n  \"CompanyId\": \"36abd291-7e32-64e1-d9d8-ed1a12642109\",\n  \"CreatedAt\": \"2006-01-23T09:21:21.342Z\",\n  \"UpdatedAt\": \"2002-04-07T20:26:34.755Z\"\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"Name\": \"minim id in\",\n  \"Email\": \"cupidatat veniam\",\n  \"Phone\": \"deserunt id\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/companies",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"companies"
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "skills",
+			"item": [
+				{
+					"name": "{Skill Id}",
+					"item": [
+						{
+							"name": "Read Skill",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/skills/:SkillId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"skills",
+										":SkillId"
+									],
+									"variable": [
+										{
+											"key": "SkillId",
+											"value": "31eedd81-6ed3-1c95-b9e5-256941a916cd",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/skills/:SkillId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"skills",
+												":SkillId"
+											],
+											"variable": [
+												{
+													"key": "SkillId",
+													"value": "31eedd81-6ed3-1c95-b9e5-256941a916cd",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"Name\": \"sit magna reprehenderit \",\n  \"SkillId\": \"df418d6a-5d0c-11a6-05d2-84b6e9d89f8e\",\n  \"CreatedAt\": \"1966-01-05T20:57:08.040Z\",\n  \"UpdatedAt\": \"1992-10-02T04:52:09.843Z\"\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/skills/:SkillId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"skills",
+												":SkillId"
+											],
+											"variable": [
+												{
+													"key": "SkillId",
+													"value": "31eedd81-6ed3-1c95-b9e5-256941a916cd",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Skill",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/skills/:SkillId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"skills",
+										":SkillId"
+									],
+									"variable": [
+										{
+											"key": "SkillId",
+											"value": "31eedd81-6ed3-1c95-b9e5-256941a916cd",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/skills/:SkillId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"skills",
+												":SkillId"
+											],
+											"variable": [
+												{
+													"key": "SkillId",
+													"value": "31eedd81-6ed3-1c95-b9e5-256941a916cd",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"Name\": \"sit magna reprehenderit \",\n  \"SkillId\": \"df418d6a-5d0c-11a6-05d2-84b6e9d89f8e\",\n  \"CreatedAt\": \"1966-01-05T20:57:08.040Z\",\n  \"UpdatedAt\": \"1992-10-02T04:52:09.843Z\"\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/skills/:SkillId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"skills",
+												":SkillId"
+											],
+											"variable": [
+												{
+													"key": "SkillId",
+													"value": "31eedd81-6ed3-1c95-b9e5-256941a916cd",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Skill",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"Name\": \"est minim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/skills/:SkillId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"skills",
+										":SkillId"
+									],
+									"variable": [
+										{
+											"key": "SkillId",
+											"value": "31eedd81-6ed3-1c95-b9e5-256941a916cd",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"Name\": \"est minim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/skills/:SkillId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"skills",
+												":SkillId"
+											],
+											"variable": [
+												{
+													"key": "SkillId",
+													"value": "31eedd81-6ed3-1c95-b9e5-256941a916cd",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"Name\": \"sit magna reprehenderit \",\n  \"SkillId\": \"df418d6a-5d0c-11a6-05d2-84b6e9d89f8e\",\n  \"CreatedAt\": \"1966-01-05T20:57:08.040Z\",\n  \"UpdatedAt\": \"1992-10-02T04:52:09.843Z\"\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"Name\": \"est minim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/skills/:SkillId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"skills",
+												":SkillId"
+											],
+											"variable": [
+												{
+													"key": "SkillId",
+													"value": "31eedd81-6ed3-1c95-b9e5-256941a916cd",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Read Skills",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/skills?skip=0&limit=100",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"skills"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/skills?skip=0&limit=100",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"skills"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"Name\": \"esse\",\n    \"SkillId\": \"urn:uuid:d6e8e00c-1f62-6523-2ebe-6355fd82bf5f\",\n    \"CreatedAt\": \"2018-06-14T04:13:52.104Z\",\n    \"UpdatedAt\": \"2009-12-18T00:11:30.138Z\"\n  },\n  {\n    \"Name\": \"voluptate amet nostrud\",\n    \"SkillId\": \"036e1158-b35f-cd75-c489-6a2d794f28c2\",\n    \"CreatedAt\": \"1944-08-22T09:58:16.020Z\",\n    \"UpdatedAt\": \"1976-08-09T16:35:14.203Z\"\n  }\n]"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/skills?skip=0&limit=100",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"skills"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create New Skill",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Name\": \"est minim\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/skills",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"skills"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"Name\": \"est minim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/skills",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"skills"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"Name\": \"sit magna reprehenderit \",\n  \"SkillId\": \"df418d6a-5d0c-11a6-05d2-84b6e9d89f8e\",\n  \"CreatedAt\": \"1966-01-05T20:57:08.040Z\",\n  \"UpdatedAt\": \"1992-10-02T04:52:09.843Z\"\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"Name\": \"est minim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/skills",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"skills"
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "{User Id}",
+					"item": [
+						{
+							"name": "Read User",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/:UserId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":UserId"
+									],
+									"variable": [
+										{
+											"key": "UserId",
+											"value": "urn:uuid:7c9f082d-eb9b-c60c-a3a5-618bfd29596e",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/users/:UserId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":UserId"
+											],
+											"variable": [
+												{
+													"key": "UserId",
+													"value": "urn:uuid:7c9f082d-eb9b-c60c-a3a5-618bfd29596e",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"FirstName\": \"ullamco ipsum officia exercitation\",\n  \"LastName\": \"repr\",\n  \"Email\": \"non consequat mollit\",\n  \"YearsPreviousExperience\": 70970089,\n  \"UserId\": \"1d0a9c26-deed-61ba-c459-28c890a2b769\",\n  \"CreatedAt\": \"1994-12-29T19:38:35.443Z\",\n  \"UpdatedAt\": \"2008-09-15T18:32:14.610Z\",\n  \"UserSkills\": []\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/users/:UserId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":UserId"
+											],
+											"variable": [
+												{
+													"key": "UserId",
+													"value": "urn:uuid:7c9f082d-eb9b-c60c-a3a5-618bfd29596e",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/:UserId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":UserId"
+									],
+									"variable": [
+										{
+											"key": "UserId",
+											"value": "urn:uuid:7c9f082d-eb9b-c60c-a3a5-618bfd29596e",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/users/:UserId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":UserId"
+											],
+											"variable": [
+												{
+													"key": "UserId",
+													"value": "urn:uuid:7c9f082d-eb9b-c60c-a3a5-618bfd29596e",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"FirstName\": \"ullamco ipsum officia exercitation\",\n  \"LastName\": \"repr\",\n  \"Email\": \"non consequat mollit\",\n  \"YearsPreviousExperience\": 70970089,\n  \"UserId\": \"1d0a9c26-deed-61ba-c459-28c890a2b769\",\n  \"CreatedAt\": \"1994-12-29T19:38:35.443Z\",\n  \"UpdatedAt\": \"2008-09-15T18:32:14.610Z\",\n  \"UserSkills\": []\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/users/:UserId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":UserId"
+											],
+											"variable": [
+												{
+													"key": "UserId",
+													"value": "urn:uuid:7c9f082d-eb9b-c60c-a3a5-618bfd29596e",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Update User",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"FirstName\": \"deserunt Excepteur pariatur\",\n  \"LastName\": \"laborum aute\",\n  \"Email\": \"minim proident id sit Ut\",\n  \"YearsPreviousExperience\": 4431119,\n  \"UserSkills\": [\n    {\n      \"SkillId\": \"0cfc0256-f167-a615-aa37-8f03d864474a\",\n      \"UserSkillExperience\": 20822755\n    },\n    {\n      \"SkillId\": \"a6151f51-fb1c-048f-7d94-45a2f4aa6b6a\",\n      \"UserSkillExperience\": -79807215\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/:UserId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":UserId"
+									],
+									"variable": [
+										{
+											"key": "UserId",
+											"value": "urn:uuid:7c9f082d-eb9b-c60c-a3a5-618bfd29596e",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"FirstName\": \"deserunt Excepteur pariatur\",\n  \"LastName\": \"laborum aute\",\n  \"Email\": \"minim proident id sit Ut\",\n  \"YearsPreviousExperience\": 4431119,\n  \"UserSkills\": [\n    {\n      \"SkillId\": \"0cfc0256-f167-a615-aa37-8f03d864474a\",\n      \"UserSkillExperience\": 20822755\n    },\n    {\n      \"SkillId\": \"a6151f51-fb1c-048f-7d94-45a2f4aa6b6a\",\n      \"UserSkillExperience\": -79807215\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users/:UserId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":UserId"
+											],
+											"variable": [
+												{
+													"key": "UserId",
+													"value": "urn:uuid:7c9f082d-eb9b-c60c-a3a5-618bfd29596e",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"FirstName\": \"ullamco ipsum officia exercitation\",\n  \"LastName\": \"repr\",\n  \"Email\": \"non consequat mollit\",\n  \"YearsPreviousExperience\": 70970089,\n  \"UserId\": \"1d0a9c26-deed-61ba-c459-28c890a2b769\",\n  \"CreatedAt\": \"1994-12-29T19:38:35.443Z\",\n  \"UpdatedAt\": \"2008-09-15T18:32:14.610Z\",\n  \"UserSkills\": []\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"FirstName\": \"deserunt Excepteur pariatur\",\n  \"LastName\": \"laborum aute\",\n  \"Email\": \"minim proident id sit Ut\",\n  \"YearsPreviousExperience\": 4431119,\n  \"UserSkills\": [\n    {\n      \"SkillId\": \"0cfc0256-f167-a615-aa37-8f03d864474a\",\n      \"UserSkillExperience\": 20822755\n    },\n    {\n      \"SkillId\": \"a6151f51-fb1c-048f-7d94-45a2f4aa6b6a\",\n      \"UserSkillExperience\": -79807215\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users/:UserId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":UserId"
+											],
+											"variable": [
+												{
+													"key": "UserId",
+													"value": "urn:uuid:7c9f082d-eb9b-c60c-a3a5-618bfd29596e",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Read Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users?skip=0&limit=100",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users?skip=0&limit=100",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"FirstName\": \"labore eu voluptate in\",\n    \"LastName\": \"occaecat sed Ut proident amet\",\n    \"Email\": \"ad labore\",\n    \"YearsPreviousExperience\": 36360146,\n    \"UserId\": \"47702a23-f1b4-d8ab-b8cf-c976c5b59902\",\n    \"CreatedAt\": \"2007-04-23T22:03:54.604Z\",\n    \"UpdatedAt\": \"1992-11-19T03:08:00.292Z\",\n    \"UserSkills\": []\n  },\n  {\n    \"FirstName\": \"consequat sunt\",\n    \"LastName\": \"id tempor\",\n    \"Email\": \"cupidatat minim \",\n    \"YearsPreviousExperience\": 75133332,\n    \"UserId\": \"847553a8-575a-7ca7-b7f7-4c0a9fb56767\",\n    \"CreatedAt\": \"1980-10-17T11:25:05.067Z\",\n    \"UpdatedAt\": \"1971-02-23T16:00:41.134Z\",\n    \"UserSkills\": []\n  }\n]"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users?skip=0&limit=100",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create New User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"FirstName\": \"magna\",\n  \"LastName\": \"sunt incididunt\",\n  \"Email\": \"cupidatat amet\",\n  \"YearsPreviousExperience\": -28702035,\n  \"UserSkills\": [\n    {\n      \"SkillId\": \"823e50b4-3b09-7b81-4184-8820bc68be25\",\n      \"UserSkillExperience\": -80426663\n    },\n    {\n      \"SkillId\": \"18bac982-75c3-cd98-04d8-7f56da9273fa\",\n      \"UserSkillExperience\": -50156134\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"FirstName\": \"deserunt Excepteur pariatur\",\n  \"LastName\": \"laborum aute\",\n  \"Email\": \"minim proident id sit Ut\",\n  \"YearsPreviousExperience\": 4431119,\n  \"UserSkills\": [\n    {\n      \"SkillId\": \"0cfc0256-f167-a615-aa37-8f03d864474a\",\n      \"UserSkillExperience\": 20822755\n    },\n    {\n      \"SkillId\": \"a6151f51-fb1c-048f-7d94-45a2f4aa6b6a\",\n      \"UserSkillExperience\": -79807215\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"FirstName\": \"ullamco ipsum officia exercitation\",\n  \"LastName\": \"repr\",\n  \"Email\": \"non consequat mollit\",\n  \"YearsPreviousExperience\": 70970089,\n  \"UserId\": \"1d0a9c26-deed-61ba-c459-28c890a2b769\",\n  \"CreatedAt\": \"1994-12-29T19:38:35.443Z\",\n  \"UpdatedAt\": \"2008-09-15T18:32:14.610Z\",\n  \"UserSkills\": []\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"FirstName\": \"deserunt Excepteur pariatur\",\n  \"LastName\": \"laborum aute\",\n  \"Email\": \"minim proident id sit Ut\",\n  \"YearsPreviousExperience\": 4431119,\n  \"UserSkills\": [\n    {\n      \"SkillId\": \"0cfc0256-f167-a615-aa37-8f03d864474a\",\n      \"UserSkillExperience\": 20822755\n    },\n    {\n      \"SkillId\": \"a6151f51-fb1c-048f-7d94-45a2f4aa6b6a\",\n      \"UserSkillExperience\": -79807215\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "vacancies",
+			"item": [
+				{
+					"name": "{Vacancy Id}",
+					"item": [
+						{
+							"name": "Read Vacancy",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/vacancies/:VacancyId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"vacancies",
+										":VacancyId"
+									],
+									"variable": [
+										{
+											"key": "VacancyId",
+											"value": "ae1d9249-4f69-3f2c-2bc1-fdda350ca116",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/vacancies/:VacancyId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"vacancies",
+												":VacancyId"
+											],
+											"variable": [
+												{
+													"key": "VacancyId",
+													"value": "ae1d9249-4f69-3f2c-2bc1-fdda350ca116",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"PositionName\": \"in nisi veniam exercitation\",\n  \"CompanyId\": \"urn:uuid:304c0e38-b410-6414-4106-71c8f10b125e\",\n  \"VacancyLink\": \"officia irure cillum dolor do\",\n  \"Currency\": \"occaecat ut Lorem tempor elit\",\n  \"Salary\": -18962657,\n  \"VacancyId\": \"5a03e3b4-6e9b-4dd2-5e23-01c7815fe44b\",\n  \"CreatedAt\": \"2004-08-23T13:54:42.901Z\",\n  \"UpdatedAt\": \"2012-08-12T02:21:26.969Z\",\n  \"RequiredSkills\": []\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/vacancies/:VacancyId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"vacancies",
+												":VacancyId"
+											],
+											"variable": [
+												{
+													"key": "VacancyId",
+													"value": "ae1d9249-4f69-3f2c-2bc1-fdda350ca116",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Vacancy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/vacancies/:VacancyId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"vacancies",
+										":VacancyId"
+									],
+									"variable": [
+										{
+											"key": "VacancyId",
+											"value": "ae1d9249-4f69-3f2c-2bc1-fdda350ca116",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/vacancies/:VacancyId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"vacancies",
+												":VacancyId"
+											],
+											"variable": [
+												{
+													"key": "VacancyId",
+													"value": "ae1d9249-4f69-3f2c-2bc1-fdda350ca116",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"PositionName\": \"in nisi veniam exercitation\",\n  \"CompanyId\": \"urn:uuid:304c0e38-b410-6414-4106-71c8f10b125e\",\n  \"VacancyLink\": \"officia irure cillum dolor do\",\n  \"Currency\": \"occaecat ut Lorem tempor elit\",\n  \"Salary\": -18962657,\n  \"VacancyId\": \"5a03e3b4-6e9b-4dd2-5e23-01c7815fe44b\",\n  \"CreatedAt\": \"2004-08-23T13:54:42.901Z\",\n  \"UpdatedAt\": \"2012-08-12T02:21:26.969Z\",\n  \"RequiredSkills\": []\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/vacancies/:VacancyId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"vacancies",
+												":VacancyId"
+											],
+											"variable": [
+												{
+													"key": "VacancyId",
+													"value": "ae1d9249-4f69-3f2c-2bc1-fdda350ca116",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Vacancy",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"PositionName\": \"dolore aliqua ullamco\",\n  \"CompanyId\": \"urn:uuid:924092ad-d30f-ff69-6999-ca6c9f38e1e8\",\n  \"VacancyLink\": \"veniam mollit dolor\",\n  \"Currency\": \"ni\",\n  \"Salary\": 6368113,\n  \"RequiredSkills\": [\n    {\n      \"SkillId\": \"8b6ef332-264c-d24d-60c4-f53f0fe1c9bf\",\n      \"RequiredSkillMinimumExperience\": 15868303\n    },\n    {\n      \"SkillId\": \"urn:uuid:6f3fbef1-11eb-64c9-a1df-97394105fd9a\",\n      \"RequiredSkillMinimumExperience\": 87648541\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/vacancies/:VacancyId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"vacancies",
+										":VacancyId"
+									],
+									"variable": [
+										{
+											"key": "VacancyId",
+											"value": "ae1d9249-4f69-3f2c-2bc1-fdda350ca116",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"PositionName\": \"dolore aliqua ullamco\",\n  \"CompanyId\": \"urn:uuid:924092ad-d30f-ff69-6999-ca6c9f38e1e8\",\n  \"VacancyLink\": \"veniam mollit dolor\",\n  \"Currency\": \"ni\",\n  \"Salary\": 6368113,\n  \"RequiredSkills\": [\n    {\n      \"SkillId\": \"8b6ef332-264c-d24d-60c4-f53f0fe1c9bf\",\n      \"RequiredSkillMinimumExperience\": 15868303\n    },\n    {\n      \"SkillId\": \"urn:uuid:6f3fbef1-11eb-64c9-a1df-97394105fd9a\",\n      \"RequiredSkillMinimumExperience\": 87648541\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/vacancies/:VacancyId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"vacancies",
+												":VacancyId"
+											],
+											"variable": [
+												{
+													"key": "VacancyId",
+													"value": "ae1d9249-4f69-3f2c-2bc1-fdda350ca116",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"PositionName\": \"in nisi veniam exercitation\",\n  \"CompanyId\": \"urn:uuid:304c0e38-b410-6414-4106-71c8f10b125e\",\n  \"VacancyLink\": \"officia irure cillum dolor do\",\n  \"Currency\": \"occaecat ut Lorem tempor elit\",\n  \"Salary\": -18962657,\n  \"VacancyId\": \"5a03e3b4-6e9b-4dd2-5e23-01c7815fe44b\",\n  \"CreatedAt\": \"2004-08-23T13:54:42.901Z\",\n  \"UpdatedAt\": \"2012-08-12T02:21:26.969Z\",\n  \"RequiredSkills\": []\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"PositionName\": \"dolore aliqua ullamco\",\n  \"CompanyId\": \"urn:uuid:924092ad-d30f-ff69-6999-ca6c9f38e1e8\",\n  \"VacancyLink\": \"veniam mollit dolor\",\n  \"Currency\": \"ni\",\n  \"Salary\": 6368113,\n  \"RequiredSkills\": [\n    {\n      \"SkillId\": \"8b6ef332-264c-d24d-60c4-f53f0fe1c9bf\",\n      \"RequiredSkillMinimumExperience\": 15868303\n    },\n    {\n      \"SkillId\": \"urn:uuid:6f3fbef1-11eb-64c9-a1df-97394105fd9a\",\n      \"RequiredSkillMinimumExperience\": 87648541\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/vacancies/:VacancyId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"vacancies",
+												":VacancyId"
+											],
+											"variable": [
+												{
+													"key": "VacancyId",
+													"value": "ae1d9249-4f69-3f2c-2bc1-fdda350ca116",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Read Vacancys",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/vacancies?skip=0&limit=100",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vacancies"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/vacancies?skip=0&limit=100",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"vacancies"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"PositionName\": \"nisi sit Excepteur\",\n    \"CompanyId\": \"urn:uuid:f300aca0-9fcd-28a9-89fe-0f1d0e250b26\",\n    \"VacancyLink\": \"consectetur labore non ullamco nulla\",\n    \"Currency\": \"ullamco\",\n    \"Salary\": -62450446,\n    \"VacancyId\": \"urn:uuid:5a1625b6-4e50-5241-fcea-7a373242425c\",\n    \"CreatedAt\": \"1979-02-28T04:09:25.031Z\",\n    \"UpdatedAt\": \"1981-08-31T04:00:22.109Z\",\n    \"RequiredSkills\": []\n  },\n  {\n    \"PositionName\": \"culpa ut\",\n    \"CompanyId\": \"e13af132-c0bb-fd27-c40f-4811568f8dce\",\n    \"VacancyLink\": \"eu ullamco\",\n    \"Currency\": \"aute dolor Excepteur dolor ipsum\",\n    \"Salary\": 60873096,\n    \"VacancyId\": \"urn:uuid:e5e0068d-37f6-f6fe-ab11-08fc4efecf58\",\n    \"CreatedAt\": \"1950-02-17T23:52:37.002Z\",\n    \"UpdatedAt\": \"2008-04-02T16:14:29.379Z\",\n    \"RequiredSkills\": []\n  }\n]"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/vacancies?skip=0&limit=100",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"vacancies"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create New Vacancy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"PositionName\": \"sit tempor\",\n  \"CompanyId\": \"urn:uuid:e9f73c98-f78d-29e4-7f80-927aea266917\",\n  \"VacancyLink\": \"ex elit voluptate\",\n  \"Currency\": \"Lorem sunt deserunt\",\n  \"Salary\": 36643238,\n  \"RequiredSkills\": [\n    {\n      \"SkillId\": \"d0816007-c9e7-7c3f-6ec4-398de7499864\",\n      \"RequiredSkillMinimumExperience\": -43131842\n    },\n    {\n      \"SkillId\": \"urn:uuid:9e3d17ad-7265-38f6-3ac1-ad3254f4d433\",\n      \"RequiredSkillMinimumExperience\": 68690231\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/vacancies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vacancies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"PositionName\": \"dolore aliqua ullamco\",\n  \"CompanyId\": \"urn:uuid:924092ad-d30f-ff69-6999-ca6c9f38e1e8\",\n  \"VacancyLink\": \"veniam mollit dolor\",\n  \"Currency\": \"ni\",\n  \"Salary\": 6368113,\n  \"RequiredSkills\": [\n    {\n      \"SkillId\": \"8b6ef332-264c-d24d-60c4-f53f0fe1c9bf\",\n      \"RequiredSkillMinimumExperience\": 15868303\n    },\n    {\n      \"SkillId\": \"urn:uuid:6f3fbef1-11eb-64c9-a1df-97394105fd9a\",\n      \"RequiredSkillMinimumExperience\": 87648541\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/vacancies",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"vacancies"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"PositionName\": \"in nisi veniam exercitation\",\n  \"CompanyId\": \"urn:uuid:304c0e38-b410-6414-4106-71c8f10b125e\",\n  \"VacancyLink\": \"officia irure cillum dolor do\",\n  \"Currency\": \"occaecat ut Lorem tempor elit\",\n  \"Salary\": -18962657,\n  \"VacancyId\": \"5a03e3b4-6e9b-4dd2-5e23-01c7815fe44b\",\n  \"CreatedAt\": \"2004-08-23T13:54:42.901Z\",\n  \"UpdatedAt\": \"2012-08-12T02:21:26.969Z\",\n  \"RequiredSkills\": []\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"PositionName\": \"dolore aliqua ullamco\",\n  \"CompanyId\": \"urn:uuid:924092ad-d30f-ff69-6999-ca6c9f38e1e8\",\n  \"VacancyLink\": \"veniam mollit dolor\",\n  \"Currency\": \"ni\",\n  \"Salary\": 6368113,\n  \"RequiredSkills\": [\n    {\n      \"SkillId\": \"8b6ef332-264c-d24d-60c4-f53f0fe1c9bf\",\n      \"RequiredSkillMinimumExperience\": 15868303\n    },\n    {\n      \"SkillId\": \"urn:uuid:6f3fbef1-11eb-64c9-a1df-97394105fd9a\",\n      \"RequiredSkillMinimumExperience\": 87648541\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/vacancies",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"vacancies"
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Read Main",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		},
+		{
+			"name": "Recommended Vacancies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/recommendedVacancies/:UserId",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"recommendedVacancies",
+						":UserId"
+					],
+					"variable": [
+						{
+							"key": "UserId",
+							"value": "urn:uuid:7c9f082d-eb9b-c60c-a3a5-618bfd29596e",
+							"description": "(Required) "
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/recommendedVacancies/:UserId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"recommendedVacancies",
+								":UserId"
+							],
+							"variable": [
+								{
+									"key": "UserId",
+									"value": "urn:uuid:7c9f082d-eb9b-c60c-a3a5-618bfd29596e",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n  {\n    \"PositionName\": \"nulla incididunt tempor commodo\",\n    \"CompanyId\": \"67437f98-3689-ff60-32ec-78243fb559d8\",\n    \"VacancyLink\": \"commodo labore\",\n    \"Currency\": \"adipisicing minim eiusmod\",\n    \"Salary\": -29512031,\n    \"VacancyId\": \"725dfb9c-56c1-efe2-c56e-ecd08b5f82eb\",\n    \"CreatedAt\": \"1982-01-29T22:57:28.494Z\",\n    \"UpdatedAt\": \"2020-12-05T21:01:30.283Z\",\n    \"RequiredSkills\": []\n  },\n  {\n    \"PositionName\": \"esse id est Lorem\",\n    \"CompanyId\": \"155cef99-c17f-836b-a944-8d1cc3fa9cad\",\n    \"VacancyLink\": \"est do\",\n    \"Currency\": \"ex culpa sit\",\n    \"Salary\": -99288771,\n    \"VacancyId\": \"6cb7ea78-edbd-68f5-a62a-0be6c69c65ef\",\n    \"CreatedAt\": \"2007-09-18T15:19:17.409Z\",\n    \"UpdatedAt\": \"1995-01-28T01:57:57.030Z\",\n    \"RequiredSkills\": []\n  }\n]"
+				},
+				{
+					"name": "Validation Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/recommendedVacancies/:UserId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"recommendedVacancies",
+								":UserId"
+							],
+							"variable": [
+								{
+									"key": "UserId",
+									"value": "urn:uuid:7c9f082d-eb9b-c60c-a3a5-618bfd29596e",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut reprehenderit esse Duis in\",\n        \"ea do \"\n      ],\n      \"msg\": \"sunt nostrud in\",\n      \"type\": \"voluptate\"\n    },\n    {\n      \"loc\": [\n        \"sed sint\",\n        \"cillum\"\n      ],\n      \"msg\": \"ut nulla esse\",\n      \"type\": \"laboris in do eu ut\"\n    }\n  ]\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}

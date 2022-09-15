@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    environment:
+      - DATABASE_URL=postgresql://fastapi_hunty:fastapi_hunty@db:5432/fastapi_hunty
+    depends_on:
+      - db
+  db:
+    image: postgres:13-alpine
+    volumes:
+      - postgres_data_prod:/var/lib/postgresql/data/
+    expose:
+      - 5432
+    environment:
+      - POSTGRES_USER=fastapi_hunty
+      - POSTGRES_PASSWORD=fastapi_hunty
+      - POSTGRES_DB=fastapi_hunty
+
+volumes:
+  postgres_data_prod:
